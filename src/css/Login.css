@@ -1,0 +1,46 @@
+.divTag{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #A18D4D;
+}
+
+h1 {
+    margin-bottom: 1rem;
+  }
+  
+  form {
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    background-color: #284B4B;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* button:hover {
+    background-color: #284B4B;
+  } */

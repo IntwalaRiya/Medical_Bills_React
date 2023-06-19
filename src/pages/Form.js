@@ -59,6 +59,10 @@ export default function Form (){
         setBillPicture(file);
     };
 
+    const onExit = (e) => {
+        navigate('/')
+    }
+
     const handleSubmit = (e) => {
         const user = userData.users.find((user) => user.username === username);
 
@@ -115,7 +119,11 @@ export default function Form (){
                 <input type="file" accept="image/*" onChange={handleBillPictureChange} />
             </div>
 
-            <button type="submit">Summary</button>
+            <div className="divSubTag">
+                <button onClick={handleSubmit}>Summary</button>
+                <br/>
+                <button onClick={onExit}>Logout</button>
+            </div>
         </form>
     </div>
     );

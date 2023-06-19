@@ -35,7 +35,7 @@ export default function Summary (){
     }, []);
 
     const onBack = (e) => {
-        navigate('/form', {state: {username: username}});
+        navigate('/form', {state: {username: username, id: 1}});
     };
 
     const onSubmit = (e) => {

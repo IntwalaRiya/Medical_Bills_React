@@ -19,7 +19,7 @@ const handleSubmit = (e) => {
     const matchedUser = userData.users.find((user) => user.username === username && user.password === password);
 
     if(matchedUser){
-        navigate('/form', {state: {username: username}});
+        navigate('/form', {state: {username: username, id = 1}});
     }
     else{
         alert('Incorrect Username or Password.');

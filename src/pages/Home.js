@@ -17,6 +17,10 @@ export default function Home (){
         navigate('/')
     };
 
+    const handleNewBill = (e) => {
+        navigate('/form', {state: {username: username, id: 2 }})
+    };
+
     return(
         <div className="divTag">
             <div className="divSub">
@@ -37,7 +41,10 @@ export default function Home (){
             </ul>
             )}
 
-            <button onClick={handleButton}>Logout</button>
+            <div className="divSubTag">
+                <button onClick={handleNewBill}>New Bill</button>
+                <button onClick={handleButton}>Logout</button>
+            </div>
             </div>
         </div>
     );

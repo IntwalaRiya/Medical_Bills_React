@@ -6,6 +6,7 @@ import '../css/Form.css';
 export default function Form (){
     const navigate = useNavigate();
     const location = useLocation();
+    const id = location.state.id;
 
     const [patientName, setPatientName] = useState('');
     const [address, setAddress] = useState('');
@@ -18,7 +19,7 @@ export default function Form (){
     useEffect(() =>{
         const matchedUser = userData.users.find((user) => user.username === username);
         if(matchedUser){
-            if(matchedUser.medicalbills.length !== 0){
+            if(matchedUser.medicalbills.length !== 0 && id === 1){
                 const index = matchedUser.medicalbills.length - 1;
                 setPatientName(Object.values(matchedUser.medicalbills)[index].patientName);
                 setAddress(Object.values(matchedUser.medicalbills)[index].address);
